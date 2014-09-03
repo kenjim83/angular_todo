@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Todo</title>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-init="tasks=[{}]">
+    <div class="row">
+        <div class="medium-12 columns">
+            <div class="panel clearfix">
+                <h1 id="title">Angular Todo</h1>
+                <div id="search">
+                    <input ng-model="item">
+                    <button class="tiny">Save Item</button></td>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="medium-12 columns">
+            <button ng-click="tasks.push({})">New Row</button>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Completed</th>
+                </tr>
+                <tr ng-repeat="task in tasks">
+                    <td><input type="text" ng-model="task.item"></td>
+                    <td><input type="checkbox" ng-model="task.completed"></td>
+                    <td ng-class="{completed:task.completed}">{{task.item}}</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <pre>{{tasks|json}}</pre>
+
+
+
+
+
+
+
+
+    <!-- Import JS -->
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <!--<script type="text/javascript" src="js/main.js"></script>-->
+</body>
+</html>

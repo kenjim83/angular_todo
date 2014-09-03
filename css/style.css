@@ -1,0 +1,11 @@
+#search {
+  float: right;
+}
+
+#title {
+  float: left;
+}
+
+[ng-model="item"] {
+  padding: 10px;
+}
