@@ -15,10 +15,18 @@
         </div>
     </div>
 
-    <ng-include src="tasks_template"></ng-include>
+    <div class="row">
+        <div class="medium-12 columns">
+            <a ui-sref="index">Go Home</a>
+        </div>
+    </div>
 
-    <pre>{{tasks|json}}</pre>
+    <ui-view></ui-view>
 
+    <!-- <ng-include src="tasks_template"></ng-include> -->
+
+<!--     <pre>{{tasks|json}}</pre>
+ -->
 
 
 
@@ -27,7 +35,10 @@
 
 
     <!-- Import JS -->
+
     <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/ngStorage.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
