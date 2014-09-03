@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="medium-12 columns">
+        <button ng-click="add()">New Row</button>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Completed</th>
+            </tr>
+            <tr ng-repeat="task in tasks">
+                <td><input type="text" ng-model="task.item"></td>
+                <td><input type="checkbox" ng-model="task.completed"></td>
+                <td ng-class="{completed:task.completed}">{{task.item}}</td>
+                <td><button ng-click="remove($index)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
