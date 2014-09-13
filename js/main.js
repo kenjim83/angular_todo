@@ -12,8 +12,7 @@ todo.config(function($stateProvider, $urlRouterProvider){
 
   $stateProvider.state('view', {
     url: '/:id',
-    template: '<h1>Hi</h1>'
-
+    template: "<div class='row'><div class='medium-12 columns'><h1>This is a view.</h1><h3>Notice there was no page reload but a new url was created.</h3></div></div>"
   })
 
 })
@@ -28,11 +27,7 @@ todo.controller('Tasks', function($scope, $localStorage){
   // Creating your own directives.  Stay away from learning directives for now. Use ONLY if needed.
 
   $scope.tasks=[{}];
-  if($localStorage.tasks){
-    $scope.tasks = $localStorage.tasks;
-  } else {
-    $scope.reset()
-  }
+
 
   $scope.reset = function(){
     $scope.tasks = $localStorage.tasks = [{}]
@@ -44,6 +39,12 @@ todo.controller('Tasks', function($scope, $localStorage){
 
   $scope.remove = function(index){
     $scope.tasks.splice(index, 1)
+  }
+
+  if($localStorage.tasks){
+    $scope.tasks = $localStorage.tasks;
+  } else {
+    $scope.reset()
   }
 
   $scope.tasks_template = 'tasks.html';
