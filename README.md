@@ -3,6 +3,8 @@ angular_todo
 
 A simple single-page "To Do" app made in Angular with the help of [github.com/proloser](https://github.com/proloser). It uses the Angular plugin [ngStorage](https://github.com/gsklee/ngStorage) to save state on your local machine only.
 
+[DEMO](http://kenjimiwa.com/p/angular_todo)
+
 
 To Use
 ------
